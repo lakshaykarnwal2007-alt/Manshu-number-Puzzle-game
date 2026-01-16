@@ -10,5 +10,20 @@ if choice=="yes":
     print("you have only 3 attempts to answer the right number")
     
     for i in range(3):
-        guess=int(input("Enter the Number you guess:"))
+        guess=int(input("\nEnter the Number you guess:"))
         
+        if guess==number:
+            print("Correct we get that Number in",i+1,"attempts")
+            print("Thanks for Helping me buddy")
+            print("\nWe will meet in next Trouble now! Buddy!!!")
+            break
+        elif guess>number:
+            print("Too High, GO lower Buddy")
+        else:
+            print("Too Low, Go higher buddy")
+    else:
+        print("\nGame Over Buddy!")
+        print("The correct Number is",number)
+        print("\nyou losts that number Buddy!!!!")
+        print("See you soon, in next Trouble Bro!")
+            
