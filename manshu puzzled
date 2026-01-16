@@ -1,0 +1,14 @@
+import random
+
+number = random.randint(1, 10)
+
+print("Hii Buddy, I'm in a trouble now")
+print("Can you help me guessing the number between 1,10")
+choice=input("Please tell me?(yes/no):").lower()
+if choice=="yes":
+    print("\nYes, We will execute the trouble now")
+    print("you have only 3 attempts to answer the right number")
+    
+    for i in range(3):
+        guess=int(input("Enter the Number you guess:"))
+        
