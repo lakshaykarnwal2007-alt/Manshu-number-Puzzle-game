@@ -2,28 +2,34 @@ import random
 
 number = random.randint(1, 10)
 
-print("Hii Buddy, I'm in a trouble now")
-print("Can you help me guessing the number between 1,10")
-choice=input("Please tell me?(yes/no):").lower()
-if choice=="yes":
-    print("\nYes, We will execute the trouble now")
-    print("you have only 3 attempts to answer the right number")
-    
+print("Hi Buddy, I'm Manshu, I'm in trouble right now!")
+print("Can you help me guess the number between 1 and 10?")
+
+choice = input("Please tell me (yes/no): ").lower()
+
+if choice == "yes":
+    print("\nYes! Let's solve the trouble now.")
+    print("You have only 3 attempts to guess the correct number.")
+
     for i in range(3):
-        guess=int(input("\nEnter the Number you guess:"))
-        
-        if guess==number:
-            print("Correct we get that Number in",i+1,"attempts")
-            print("Thanks for Helping me buddy")
-            print("\nWe will meet in next Trouble now! Buddy!!!")
+        guess = int(input("\nEnter the number you guessed: "))
+
+        if guess == number:
+            print("Correct! We got the number in", i + 1, "attempts.")
+            print("Thanks for helping me, Buddy!")
+            print("\nWe will meet again in the next trouble!")
             break
-        elif guess>number:
-            print("Too High, GO lower Buddy")
+        elif guess > number:
+            print("Too high, go lower Buddy.")
         else:
-            print("Too Low, Go higher buddy")
+            print("Too low, go higher Buddy.")
     else:
         print("\nGame Over Buddy!")
-        print("The correct Number is",number)
-        print("\nyou losts that number Buddy!!!!")
-        print("See you soon, in next Trouble Bro!")
-            
+        print("The correct number was", number)
+        print("\nYou lost the game, Buddy!")
+        print("See you soon in the next trouble!")
+
+else:
+    print("\nOh, you lose Buddy!")
+    print("Maybe next time 🙂")
+
